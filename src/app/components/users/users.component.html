@@ -1,9 +1,18 @@
-<h3>Hellow Users Components </h3>
-<table>
-    
-    <tr><td>Name</td><td>: {{ user.firstName }} {{ user.lastName }}</td></tr>
-    <tr><td>Bio</td><td>: {{ user.bio }}</td></tr>
-    <tr><td>Is Working</td><td>: {{ user.isWorking }}</td></tr>
-    <tr><td>Income</td><td>: {{ user.income }}</td></tr>
-    <tr><td>Votes</td><td>: {{ user.votes}}td></tr>
-</table>
+<h4>Users App</h4>
+
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col-4 text-center">
+        <app-user-image [user]="user"
+        (childEvent)="onMoreInfo($event.lastName, $event.company)">
+        </app-user-image>
+      </div>
+      <div class="col-8">
+       <app-user-info [user]="user"></app-user-info>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<!-- div, p, list,  -->
